@@ -12,8 +12,11 @@ docker run -d --name <nombre contenedor> -p <puerto host>:<puerto contenedor> <n
 ```
 Crear un contenedor a partir de la imagen nginx version alpine con el mapeo de puertos del ejemplo gráfico, host 3000 y contenedor 80
 # COMPLETAR
-
+C:\Users\P3E010-D>docker run -d --name srv-web4 -p 3000:80 nginx:alpine
+2d37504743c82271d447331090d71ad7b8719f55752cfa3440e6c00785b40942
 # COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:3000
+
+<img width="886" height="403" alt="image" src="https://github.com/user-attachments/assets/762f4efc-2d40-4b40-96c0-8da9814c43e5" />
 
 ### Para mapear más de un puerto
 
@@ -22,6 +25,7 @@ docker run -d --name <nombre contenedor> -p <puerto host 01>:<puerto contenedor 
 ```
 
 Crear un contenedor a partir de la imagen rabbitmq version management-alpine, para este mapeo de puertos usar en el host los mismos puertos del contenedor.
+
 # COMPLETAR
 
 ### Usando una forma más semántica cuando se especifican puertos
@@ -33,7 +37,7 @@ docker run -d --name <nombre contenedor> --publish published=<valorPuertoHost>,t
 ```
 docker run -P -d --name <nombre contenedor> <nombre imagen>:<tag> 
 ```
-
+C:\Users\P3E010-D>docker run -P -d --name rrabit rabbitmq:management-alpine
 -P: le indica a Docker que asigne automáticamente puertos aleatorios en tu host para todos los puertos expuestos por el contenedor.
 
 **Recordar**
@@ -44,8 +48,17 @@ No puedes mapear puertos a un contenedor existente directamente después de su c
 
 # COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:8080
 
+
+C:\Users\P3E010-D>docker run -d --name jenkins1 -p 8080:8080 jenkins/jenkins:alpine3.18-jdk11
+dfc9600100301f17462568d4ed1d19baf99b890db85cdb7167d6eb52460cc059
+
+<img width="1672" height="967" alt="image" src="https://github.com/user-attachments/assets/e75e1c6a-918e-45ad-a731-774525ce8bac" />
+
+
 ### ¿Cómo obtener la contraseña solicitada?
 Para obtener la contraseña solicitada es necesario ingresar al contenedor.
 
 ![Imagen](jenkins.PNG)
+
+
 
