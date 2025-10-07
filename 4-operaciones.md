@@ -6,8 +6,14 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+listar elementos en el fichero
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+listar todos los elementos de largo detalle
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
+docker exec jenkins1 ls -l
+se visualiza todos los elementos del contenedor y sus detalles
+<img width="1322" height="666" alt="image" src="https://github.com/user-attachments/assets/6c642146-f5e9-4f74-8347-d2434e630cf9" />
+
 # COMPLETAR
 # COLOCAR UNA CAPTURA DE PANTALLA
 
@@ -44,6 +50,7 @@ Ejecutar
 whoami
 ```
 # COLOCAR UNA CAPTURA DE PANTALLA
+<img width="1230" height="629" alt="image" src="https://github.com/user-attachments/assets/73c0369a-adf0-47ac-a349-2f2ec1bc9292" />
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -66,8 +73,11 @@ docker exec -it <nombre contenedor> <programa o comando>
 # COMPLETAR
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
+<img width="1214" height="127" alt="image" src="https://github.com/user-attachments/assets/0e1e079c-8159-4421-88ca-d1cedadddbb1" />
+
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
+<img width="1596" height="853" alt="image" src="https://github.com/user-attachments/assets/509e3256-47b9-42fe-8023-c837877b6c21" />
 
 
 ### Para ver los logs de un contenedor
@@ -76,4 +86,5 @@ docker exec -it <nombre contenedor> <programa o comando>
 docker logs -n <cantidad de líneas> <nombre o id del contenedor> 
 ```
 -t: para incluir la fecha y la hora
+<img width="1247" height="618" alt="image" src="https://github.com/user-attachments/assets/f99704be-9ea5-4742-bbe8-35f91fd79fe4" />
 
